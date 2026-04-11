@@ -1,13 +1,48 @@
-### My store https://www.keyboard-hoarders.com https://www.keyboardhoarders.etsy.com
-![ukogvc9z copy](https://github.com/user-attachments/assets/59156141-b7cd-4627-be30-9b69cd84722c)
+# zmk-corne-mini
 
+Personal ZMK config for my Corne Mini.
 
-### Keymap Layout
+This started from the KeyboardHoarders Corne config and has been customized around home-row mods, thumb-accessed nav/symbol layers, a conditional system layer, and built-in mouse controls.
 
+## Layout
 
-![corne-mini_keymap](https://github.com/user-attachments/assets/a631bcff-280e-4bcc-9952-5bd3f432b854)
+The layout image below is generated directly from [`config/corne.keymap`](./config/corne.keymap), so it stays in sync with the firmware source.
 
+![Current keymap](assets/corne.keymap.svg)
 
-### How can you access different Bluetooth profiles? For example, you can pair your phone with your keyboard and then seamlessly switch between using it with your phone and your computer.
+## Combos
 
-![bluetoothpair-guide](https://github.com/user-attachments/assets/e0e91ebb-ae41-43c8-b502-49e237e52501)
+![Combo diagram](assets/corne.combos.svg)
+
+Notable combos in the current layout:
+
+- `Esc` and `Delete`
+- symbol combos for `@ # $ % \ / * + - _ [ ] < >`
+- `Copy` and `Paste`
+
+## Layers
+
+- `Base`: alpha layer with home-row mods
+- `Nav`: numbers, arrows, paging, and navigation
+- `Sym`: symbols and brackets
+- `System`: Bluetooth profile controls, bootloader, mouse movement, scroll, and clicks
+
+`System` is activated as a conditional layer when both `Nav` and `Sym` are held.
+
+## Bluetooth And ZMK Studio
+
+To manage Bluetooth profiles or connect through ZMK Studio:
+
+1. Plug the left half into your computer over USB.
+2. Open `https://zmk.studio`.
+3. Connect to the board when it appears.
+4. Use the `System` layer for `BT_SEL 0`, `BT_SEL 1`, `BT_SEL 2`, `BT_CLR`, and `BT_CLR_ALL`.
+5. Use the `studio_unlock` key on the `System` layer if Studio asks for it.
+
+## Regenerating The Diagrams
+
+```bash
+uvx --from keymap-drawer keymap parse -z config/corne.keymap -c 6 -o assets/corne.keymap.yaml
+uvx --from keymap-drawer keymap draw -z corne assets/corne.keymap.yaml -o assets/corne.keymap.svg
+uvx --from keymap-drawer keymap draw -z corne --combos-only assets/corne.keymap.yaml -o assets/corne.combos.svg
+```
