@@ -1,8 +1,10 @@
-layout: {zmk_keyboard: corne}
+---
+layout:
+  zmk_keyboard: corne
+  layout_name: five_column_transform
 layers:
   Base:
-  - - {t: ▽, type: trans}
-    - Q
+  - - Q
     - W
     - E
     - R
@@ -12,40 +14,44 @@ layers:
     - I
     - O
     - P
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: A, h: LGUI}
-    - {t: S, h: LSHFT}
-    - {t: D, h: LALT}
-    - {t: F, h: LCTRL}
+  - - t: A
+      h: LGUI
+    - t: S
+      h: LSHFT
+    - t: D
+      h: LALT
+    - t: F
+      h: LCTRL
     - G
   - - H
-    - {t: J, h: RCTRL}
-    - {t: K, h: RALT}
-    - {t: L, h: RSHFT}
-    - {t: ;, h: RGUI}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - Z
+    - t: J
+      h: RCTRL
+    - t: K
+      h: RALT
+    - t: L
+      h: RSHFT
+    - t: ";"
+      h: RGUI
+  - - Z
     - X
     - C
     - V
     - B
   - - N
     - M
-    - ','
-    - .
-    - /
-    - {t: ▽, type: trans}
-  - - {t: ESCAPE, h: LGUI}
+    - ","
+    - "."
+    - "/"
+  - - t: ESCAPE
+      h: LGUI
     - Nav
     - SPACE
-    - RET
-    - {t: TAB, h: Sym}
+  - - RET
+    - t: TAB
+      h: Sym
     - BACKSPACE
   Nav:
-  - - {t: ▽, type: trans}
-    - '1'
+  - - '1'
     - '2'
     - '3'
     - '4'
@@ -55,159 +61,222 @@ layers:
     - '8'
     - '9'
     - '0'
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: '0', h: LGUI}
-    - {t: '4', h: LSHFT}
-    - {t: UP ARROW, h: LALT}
-    - {t: DEL, h: LCTRL}
+  - - t: '0'
+      h: LGUI
+    - t: '4'
+      h: LSHFT
+    - t: UP ARROW
+      h: LALT
+    - t: DEL
+      h: LCTRL
     - PAGE UP
   - - '0'
-    - {t: '4', h: RCTRL}
-    - {t: '5', h: RALT}
-    - {t: '6', h: RSHFT}
-    - {t: PAGE UP, h: RGUI}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: '4'
+      h: RCTRL
+    - t: '5'
+      h: RALT
+    - t: '6'
+      h: RSHFT
+    - t: PAGE UP
+      h: RGUI
+  - - t: "▽"
+      type: trans
     - LEFT
     - DOWN
     - RIGHT ARROW
     - PAGE DOWN
-  - - {t: ▽, type: trans}
+  - - t: "▽"
+      type: trans
     - '1'
     - '2'
     - '3'
     - PAGE DOWN
-    - {t: ▽, type: trans}
   - - LGUI
-    - {type: held}
+    - type: held
     - SPACE
-    - RET
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - RET
+    - t: "▽"
+      type: trans
+    - t: "▽"
+      type: trans
   Sym:
-  - - {t: ▽, type: trans}
-    - '!'
-    - '@'
-    - '#'
-    - $
-    - '%'
-  - - ^
-    - '&'
-    - '*'
-    - (
-    - )
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: UP ARROW, h: LALT}
-    - {t: '''', h: LCTRL}
-    - '`'
-  - - '-'
-    - {t: '=', h: RCTRL}
-    - {t: '[', h: RALT}
-    - {t: ']', h: RSHFT}
-    - {t: \, h: RGUI}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - "!"
+    - "@"
+    - "#"
+    - "$"
+    - "%"
+  - - "^"
+    - "&"
+    - "*"
+    - "("
+    - ")"
+  - - t: "▽"
+      type: trans
+    - t: "▽"
+      type: trans
+    - t: UP ARROW
+      h: LALT
+    - t: "'"
+      h: LCTRL
+    - "`"
+  - - "-"
+    - t: "="
+      h: RCTRL
+    - t: "["
+      h: RALT
+    - t: "]"
+      h: RSHFT
+    - t: "\\"
+      h: RGUI
+  - - t: "▽"
+      type: trans
     - LEFT ARROW
     - DOWN ARROW
     - RIGHT ARROW
-    - '~'
+    - "~"
   - - _
-    - +
-    - '{'
-    - '}'
-    - '|'
-    - {t: ▽, type: trans}
+    - "+"
+    - "{"
+    - "}"
+    - "|"
   - - LGUI
-    - {t: ▽, type: trans}
+    - t: "▽"
+      type: trans
     - SPACE
-    - RET
-    - {type: held}
-    - {t: ▽, type: trans}
+  - - RET
+    - type: held
+    - t: "▽"
+      type: trans
   System:
-  - - {t: ▽, type: trans}
-    - F1
+  - - F1
     - F2
-    - '&mmv MOVE_UP'
+    - "&mmv MOVE_UP"
     - F4
     - F5
   - - F6
-    - '&msc SCRL_UP'
-    - '&msc SCRL_DOWN'
+    - "&msc SCRL_UP"
+    - "&msc SCRL_DOWN"
     - F9
     - F10
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: F11, h: LGUI}
-    - '&mmv MOVE_LEFT'
-    - '&mmv MOVE_DOWN'
-    - '&mmv MOVE_RIGHT'
-    - '&studio_unlock'
-  - - {t: ▽, type: trans}
-    - '&mkp LCLK'
-    - '&mkp RCLK'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
+  - - t: F11
+      h: LGUI
+    - "&mmv MOVE_LEFT"
+    - "&mmv MOVE_DOWN"
+    - "&mmv MOVE_RIGHT"
+    - "&studio_unlock"
+  - - t: "▽"
+      type: trans
+    - "&mkp LCLK"
+    - "&mkp RCLK"
+    - t: "▽"
+      type: trans
+    - t: "▽"
+      type: trans
+  - - t: BT
+      h: '0'
+    - t: BT
+      h: '1'
+    - t: BT
+      h: '2'
     - BT CLR
     - BT CLR ALL
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - '&bootloader'
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
+  - - t: "▽"
+      type: trans
+    - t: "▽"
+      type: trans
+    - t: "▽"
+      type: trans
+    - t: "▽"
+      type: trans
+    - "&bootloader"
+  - - t: "▽"
+      type: trans
+    - type: held
+    - t: "▽"
+      type: trans
+  - - t: "▽"
+      type: trans
+    - type: held
+    - t: "▽"
+      type: trans
 combos:
-- p: [13, 29]
+- p:
+  - 10
+  - 24
   k: ESCAPE
-- p: [15, 21]
+- p:
+  - 12
+  - 18
   k: DELETE
-- p: [5, 17]
-  k: '%'
-- p: [28, 16]
-  k: '='
-- p: [4, 16]
-  k: $
-- p: [3, 15]
-  k: '#'
-- p: [2, 14]
-  k: '@'
-- p: [26, 14]
-  k: \
-- p: [28, 27]
+- p:
+  - 4
+  - 14
+  k: "%"
+- p:
+  - 23
+  - 13
+  k: "="
+- p:
+  - 3
+  - 13
+  k: "$"
+- p:
+  - 2
+  - 12
+  k: "#"
+- p:
+  - 1
+  - 11
+  k: "@"
+- p:
+  - 21
+  - 11
+  k: "\\"
+- p:
+  - 23
+  - 22
   k: COPY
-- p: [26, 27]
+- p:
+  - 21
+  - 22
   k: PASTE
-- p: [8, 20]
-  k: '*'
-- p: [32, 20]
-  k: /
-- p: [7, 19]
-  k: +
-- p: [31, 19]
+- p:
+  - 7
+  - 17
+  k: "*"
+- p:
+  - 27
+  - 17
+  k: "/"
+- p:
+  - 6
+  - 16
+  k: "+"
+- p:
+  - 26
+  - 16
   k: KP MINUS
-- p: [30, 18]
+- p:
+  - 25
+  - 15
   k: _
-- p: [31, 32]
-  k: '['
-- p: [33, 32]
-  k: ']'
-- p: [20, 19]
-  k: {t: (, s: <}
-- p: [20, 21]
-  k: {t: ), s: '>'}
+- p:
+  - 26
+  - 27
+  k: "["
+- p:
+  - 28
+  - 27
+  k: "]"
+- p:
+  - 17
+  - 16
+  k:
+    t: "("
+    s: "<"
+- p:
+  - 17
+  - 18
+  k:
+    t: ")"
+    s: ">"

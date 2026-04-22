@@ -42,7 +42,11 @@ To manage Bluetooth profiles or connect through ZMK Studio:
 ## Regenerating The Diagrams
 
 ```bash
-uvx --from keymap-drawer keymap parse -z config/corne.keymap -c 6 -o assets/corne.keymap.yaml
-uvx --from keymap-drawer keymap draw -z corne assets/corne.keymap.yaml -o assets/corne.keymap.svg
-uvx --from keymap-drawer keymap draw -z corne --combos-only assets/corne.keymap.yaml -o assets/corne.combos.svg
+./scripts/render-diagrams.rb
 ```
+
+The firmware keymap still uses the standard 42-position Corne transform with six
+transparent placeholders for the missing outer column. The script trims those
+non-physical positions, redraws the diagrams as a true 3x5+3 Corne Mini, and
+keeps combos in the separate combo diagram instead of overlaying them on the
+main layout SVG.
