@@ -262,8 +262,9 @@ path.combo {
 </g>
 <g transform="translate(262, 244) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
+<text x="0" y="0" class="key tap">TAB</text>
 <a href="#Nav">
-<text x="0" y="0" class="key tap layer-activator">Nav</text>
+<text x="0" y="28" class="key hold layer-activator">Nav</text>
 </a></g>
 <g transform="translate(337, 256) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-30" y="-46" width="60" height="92" class="key"/>
@@ -377,9 +378,7 @@ path.combo {
 </g>
 <g transform="translate(800, 120)" class="key keypos-19">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.9em">PAGE</tspan><tspan x="0" dy="1.2em">UP</tspan>
-</text>
+<text x="0" y="0" class="key tap">HOME</text>
 <text x="0" y="28" class="key hold">RGUI</text>
 </g>
 <g transform="translate(32, 184)" class="key trans keypos-20">
@@ -424,9 +423,7 @@ path.combo {
 </g>
 <g transform="translate(800, 184)" class="key keypos-29">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">PAGE</tspan><tspan x="0" dy="1.2em">DOWN</tspan>
-</text>
+<text x="0" y="0" class="key tap">END</text>
 </g>
 <g transform="translate(192, 234)" class="key keypos-30">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>

@@ -10,6 +10,11 @@ The layout image below is generated directly from [`config/corne.keymap`](./conf
 
 ![Current keymap](assets/corne.keymap.svg)
 
+PNG exports are generated alongside the SVGs for host-side preview tools:
+
+- [`assets/corne.keymap.png`](assets/corne.keymap.png)
+- [`assets/corne.combos.png`](assets/corne.combos.png)
+
 ## Combos
 
 ![Combo diagram](assets/corne.combos.svg)
@@ -29,6 +34,28 @@ Notable combos in the current layout:
 
 `System` is activated as a conditional layer when both `Nav` and `Sym` are held.
 
+## Mouse Keys
+
+Mouse movement and scroll are tuned in [`config/corne.keymap`](./config/corne.keymap):
+
+- movement max speed: `ZMK_POINTING_DEFAULT_MOVE_VAL 1200`
+- scroll max speed: `ZMK_POINTING_DEFAULT_SCRL_VAL 16`
+- movement acceleration: `450ms` to max speed, exponent `2`
+- scroll acceleration: `300ms` to max speed, exponent `1`
+
+On the `Nav` layer, the far-right key on the right half is:
+
+```text
+Home
+End
+```
+
+`Home` and `End` send the proper document top/bottom navigation keycodes for browser and app content. The `System` layer keeps the original `F6` / `F9` positions around the scroll keys.
+
+## Keymap Popup
+
+This machine's Hammerspoon config binds `Ctrl+Option+Cmd+K` to a brief Corne Mini keymap popup. The popup shows the generated keymap and combo PNGs from this repo and auto-hides after 12 seconds. Press the hotkey again while it is visible to close it immediately.
+
 ## Bluetooth And ZMK Studio
 
 To manage Bluetooth profiles or connect through ZMK Studio:
@@ -44,6 +71,8 @@ To manage Bluetooth profiles or connect through ZMK Studio:
 ```bash
 ./scripts/render-diagrams.rb
 ```
+
+The script always regenerates the YAML and SVGs. If `rsvg-convert` is installed, it also exports PNGs for the Hammerspoon popup.
 
 The firmware keymap still uses the standard 42-position Corne transform with six
 transparent placeholders for the missing outer column. The script trims those

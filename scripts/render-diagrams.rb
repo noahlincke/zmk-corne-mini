@@ -8,6 +8,8 @@ SOURCE_KEYMAP = File.join(ROOT, "config", "corne.keymap")
 OUTPUT_YAML = File.join(ROOT, "assets", "corne.keymap.yaml")
 OUTPUT_KEYMAP_SVG = File.join(ROOT, "assets", "corne.keymap.svg")
 OUTPUT_COMBOS_SVG = File.join(ROOT, "assets", "corne.combos.svg")
+OUTPUT_KEYMAP_PNG = File.join(ROOT, "assets", "corne.keymap.png")
+OUTPUT_COMBOS_PNG = File.join(ROOT, "assets", "corne.combos.png")
 DRAW_ENV = {
   "KEYMAP_KEY_W" => "64",
   "KEYMAP_KEY_H" => "64",
@@ -37,6 +39,13 @@ def run!(*command, env: {})
   return if system(env, *command)
 
   abort("command failed: #{command.join(' ')}")
+end
+
+def executable?(name)
+  ENV.fetch("PATH").split(File::PATH_SEPARATOR).any? do |dir|
+    path = File.join(dir, name)
+    File.executable?(path) && !File.directory?(path)
+  end
 end
 
 def trim_layers!(data)
@@ -104,4 +113,11 @@ Dir.mktmpdir("keymap-drawer") do |dir|
     OUTPUT_COMBOS_SVG,
     env: DRAW_ENV
   )
+end
+
+if executable?("rsvg-convert")
+  run!("rsvg-convert", "--width", "1200", "--output", OUTPUT_KEYMAP_PNG, OUTPUT_KEYMAP_SVG)
+  run!("rsvg-convert", "--width", "1200", "--output", OUTPUT_COMBOS_PNG, OUTPUT_COMBOS_SVG)
+else
+  warn("rsvg-convert not found; skipped PNG export")
 end

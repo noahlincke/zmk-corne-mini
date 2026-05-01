@@ -44,7 +44,8 @@ layers:
     - "/"
   - - t: ESCAPE
       h: LGUI
-    - Nav
+    - t: TAB
+      h: Nav
     - SPACE
   - - RET
     - t: TAB
@@ -77,7 +78,7 @@ layers:
       h: RALT
     - t: '6'
       h: RSHFT
-    - t: PAGE UP
+    - t: HOME
       h: RGUI
   - - t: "▽"
       type: trans
@@ -90,7 +91,7 @@ layers:
     - '1'
     - '2'
     - '3'
-    - PAGE DOWN
+    - END
   - - LGUI
     - type: held
     - SPACE
