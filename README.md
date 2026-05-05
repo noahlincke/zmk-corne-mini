@@ -22,7 +22,7 @@ PNG exports are generated alongside the SVGs for host-side preview tools:
 Notable combos in the current layout:
 
 - `Esc` and `Delete`
-- symbol combos for `@ # $ % \ / * + - _ [ ] < >`
+- symbol combos for `` ` @ # $ % \ / * + - _ [ ] < > ``
 - `Copy` and `Paste`
 
 ## Layers

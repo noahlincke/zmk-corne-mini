@@ -98,6 +98,11 @@
             key-positions = <2 14>;
         };
 
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <2 3>;
+        };
+
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <26 14>;
