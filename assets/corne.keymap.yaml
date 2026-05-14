@@ -181,11 +181,9 @@ layers:
       h: '2'
     - BT CLR
     - BT CLR ALL
-  - - EP ON
-    - t: "▽"
-      type: trans
-    - t: "▽"
-      type: trans
+  - - PREV
+    - PP
+    - NEXT
     - t: "▽"
       type: trans
     - "&bootloader"
