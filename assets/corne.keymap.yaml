@@ -181,8 +181,7 @@ layers:
       h: '2'
     - BT CLR
     - BT CLR ALL
-  - - t: "▽"
-      type: trans
+  - - EP ON
     - t: "▽"
       type: trans
     - t: "▽"
