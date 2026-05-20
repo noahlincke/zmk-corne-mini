@@ -169,8 +169,7 @@ layers:
       type: trans
     - "&mkp LCLK"
     - "&mkp RCLK"
-    - t: "▽"
-      type: trans
+    - VOL UP
     - t: "▽"
       type: trans
   - - t: BT
@@ -184,8 +183,7 @@ layers:
   - - PREV
     - PP
     - NEXT
-    - t: "▽"
-      type: trans
+    - VOL DN
     - "&bootloader"
   - - t: "▽"
       type: trans
