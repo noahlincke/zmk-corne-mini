@@ -221,13 +221,13 @@
         ADJ {
                 display-name = "System";
             // -----------------------------------------------------------------------------------------
-            // |  F1    |  F2         |  MOVE_UP    |  F4          |  F5  |             |  F6 |  SCRL_UP |  SCRL_DOWN  | VOL_DN | VOL_UP |
-            // |  F11   |  MOVE_LEFT  |  MOVE_DOWN  |  MOVE_RIGHT  |  studio_unlock  |  |     |  LCLK    |  RCLK       |     |  F6 |
+            // |  F1    |  F2         |  MOVE_UP    |  F3          |  F4  |             |  F6 |  SCRL_UP |  SCRL_DOWN  | VOL_DN | VOL_UP |
+            // |  F11   |  MOVE_LEFT  |  MOVE_DOWN  |  MOVE_RIGHT  |  studio_unlock  |  |     |  LCLK    |  RCLK       |     |     |
             // |  BT_SEL0  |  BT_SEL 1  |  BT_SEL 2  |  BT_CLR  |  BT_CLR_ALL  |        |  N  |  M   |  ,  |  .  |  /  |
             //                                          | GUI | layer:NAV | SPC |       | RET | layer:SYM | BACKSPACE |
             bindings = <
-&trans  &kp F1        &kp F2         &mmv MOVE_UP        &kp F4      &kp F5            &kp F6  &msc SCRL_UP  &msc SCRL_DOWN  &kp C_VOL_DN  &kp C_VOL_UP  &trans
-&trans  &hm LGUI F11  &mmv MOVE_LEFT  &mmv MOVE_DOWN        &mmv MOVE_RIGHT      &studio_unlock    &trans  &mkp LCLK  &mkp RCLK   &trans        &kp F6  &trans
+&trans  &kp F1        &kp F2         &mmv MOVE_UP        &kp F3      &kp F4            &kp F6  &msc SCRL_UP  &msc SCRL_DOWN  &kp C_VOL_DN  &kp C_VOL_UP  &trans
+&trans  &hm LGUI F11  &mmv MOVE_LEFT  &mmv MOVE_DOWN        &mmv MOVE_RIGHT      &studio_unlock    &trans  &mkp LCLK  &mkp RCLK   &trans        &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &kp C_PREV        &kp C_PP  &kp C_NEXT  &trans        &bootloader  &trans
                                      &trans        &trans      &trans            &trans  &trans  &trans
             >;

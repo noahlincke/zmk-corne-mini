@@ -152,8 +152,8 @@ layers:
   - - F1
     - F2
     - "&mmv MOVE_UP"
+    - F3
     - F4
-    - F5
   - - F6
     - "&msc SCRL_UP"
     - "&msc SCRL_DOWN"
@@ -171,7 +171,8 @@ layers:
     - "&mkp RCLK"
     - t: "▽"
       type: trans
-    - F6
+    - t: "▽"
+      type: trans
   - - t: BT
       h: '0'
     - t: BT

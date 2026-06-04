@@ -50,7 +50,7 @@ Home
 End
 ```
 
-`Home` and `End` send the proper document top/bottom navigation keycodes for browser and app content. The `System` layer keeps `F6` above the scroll keys, puts volume down/up on the top-right pair, and adds a dedicated `F6` on the far-right middle key.
+`Home` and `End` send the proper document top/bottom navigation keycodes for browser and app content. The `System` layer puts `F3` and `F4` to the right of mouse-up, keeps `F6` above the scroll keys, and uses the top-right pair for volume down/up.
 
 ## Keymap Popup
 
